@@ -1,0 +1,62 @@
+[
+ ;; Person Partition
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person
+  :db.install/_partition :db.part/db}
+
+ ;; Person Identifying Information
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/firstName
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's first name"
+  :db.install/_attribute :db.part/db}
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/middleName
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's middle name"
+  :db.install/_attribute :db.part/db}
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/lastName
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's last name"
+  :db.install/_attribute :db.part/db}
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/dob
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's date of birth"
+  :db.install/_attribute :db.part/db}
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/mrn
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's mrn"
+  :db.install/_attribute :db.part/db}
+
+ ;; Cardiomyopathy
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/cardiomyopathy
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's cardiomyopathy"
+  :db.install/_attribute :db.part/db}
+
+ ;; Phenotype
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/phenotype
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's phenotype"
+  :db.install/_attribute :db.part/db}
+
+ ;; gene (Mutation)
+ {:db/id #db/id[:db.part/db]
+  :db/ident :person/gene
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db/doc "A person's gene (mutation)"
+  :db.install/_attribute :db.part/db}
+]
